@@ -1,55 +1,83 @@
-# 🤖 Cadastro de Produtos com Python
+# 🤖 Automação de Tarefas em Python
 
-> 📦 **Transforme uma planilha CSV em cadastros preenchidos automaticamente no navegador.**
+> ⚡ **Menos tarefas repetitivas. Mais Python em ação.**
+>
+> Repositório de mini projetos que automatizam tarefas no computador com Python e PyAutoGUI — do preenchimento de formulários à navegação no navegador.
 
-Este projeto automatiza o preenchimento de um formulário de produtos. Ele ajuda a reduzir o trabalho repetitivo de copiar os dados de cada item manualmente, usando um arquivo CSV como fonte.
+## 🚀 Projetos
 
-## 🎯 Problema que resolve
+### 📦 Cadastro de Produtos
+Lê os produtos de um arquivo CSV e preenche automaticamente um formulário no navegador. O projeto usa pandas para processar os dados e PyAutoGUI para controlar a interface.
 
-Cadastrar muitos produtos um por um pode consumir tempo e aumentar a chance de erros de digitação. A automação lê os registros de `produtos.csv` e preenche os campos correspondentes no formulário do navegador, repetindo o processo para cada linha.
+📁 Pasta: `automacao.py/`
 
-## ⚙️ Como funciona
+### 🧭 GitHub Scroll Pilot
+Abre o Google Chrome, acessa o perfil do GitHub configurado e percorre a página com rolagens automatizadas.
 
-1. 📄 O pandas abre `produtos.csv` e carrega os dados em uma tabela.
-2. 🌐 O PyAutoGUI abre o Chrome e acessa o endereço do formulário configurado no script.
-3. 🔐 O script realiza o fluxo de login configurado.
-4. 🔁 Para cada linha do CSV, seleciona os campos e digita código, marca, tipo, categoria, preço, custo e observação.
-5. ✅ Envia o formulário e segue para o próximo produto.
+📁 Pasta: `GitHubScrollPilot.py/`
 
-## 🧰 Requisitos
+## 🧰 Tecnologias
 
-- Windows e Google Chrome
-- Python 3
-- Bibliotecas PyAutoGUI e pandas
+- 🐍 Python 3
+- 🤖 PyAutoGUI — controle de mouse e teclado
+- 🐼 pandas — leitura dos dados CSV
+- 📄 CSV — lista de produtos
 
-Instale as dependências:
+## ⚙️ Instalação
+
+Instale as dependências usadas pelos projetos:
 
 ```bash
 python -m pip install pyautogui pandas
 ```
 
+O cadastro de produtos requer Windows e Google Chrome. O GitHub Scroll Pilot também foi configurado para abrir o Chrome no Windows.
+
 ## ▶️ Como executar
 
-Na pasta do projeto, confira os dados e as configurações do formulário e rode:
+Execute cada automação a partir da raiz do repositório:
 
 ```bash
-python bagui.py
+python automacao.py/bagui.py
 ```
 
-O arquivo CSV precisa estar na mesma pasta e conter as colunas esperadas pelo script: `codigo`, `marca`, `tipo`, `categoria`, `preco_unitario`, `custo` e `obs`.
+```bash
+python GitHubScrollPilot.py/main.py
+```
 
-## ⚠️ Antes de executar
+Antes de iniciar o cadastro, confira o arquivo `automacao.py/produtos.csv` e os campos esperados pelo formulário.
 
-- O script interage com a tela usando coordenadas fixas. A resolução, o zoom e o layout da página podem afetar os cliques.
-- Revise o endereço e o fluxo de login configurados no código.
-- Substitua os dados de demonstração por um método seguro. Não armazene nem publique senhas reais no código ou no CSV.
-- Teste com poucos registros e em um ambiente apropriado antes de processar uma lista completa.
+## 🔄 Como funciona o cadastro
 
-## 📁 Arquivos
+1. O pandas carrega os produtos do CSV.
+2. O PyAutoGUI abre o navegador e acessa o formulário configurado no código.
+3. O script preenche os dados de cada produto e envia o formulário.
+4. O processo se repete para as linhas restantes do arquivo.
 
-- `bagui.py` — automação do navegador e preenchimento.
-- `produtos.csv` — dados de entrada para o cadastro.
+## ⚠️ Cuidados importantes
+
+- As automações controlam mouse e teclado. Evite usar o computador enquanto elas estiverem rodando.
+- O cadastro usa coordenadas fixas da tela; alterações de resolução, zoom ou layout podem afetar os cliques.
+- Revise o endereço e o fluxo de login antes de executar.
+- Não publique senhas ou chaves reais no código. Use credenciais de teste e mantenha informações de acesso protegidas.
+- Faça um teste com poucos registros antes de processar uma lista maior.
+
+## 📁 Estrutura
+
+```text
+.
+├── automacao.py/
+│   ├── bagui.py
+│   └── produtos.csv
+├── GitHubScrollPilot.py/
+│   └── main.py
+└── README.md
+```
+
+## 👨‍💻 Autor
+
+Criado por [jaovitudev](https://github.com/jaovitudev).
 
 ## 📄 Licença
 
-Nenhuma licença foi definida até o momento.
+Nenhuma licença foi definida para este repositório.
