@@ -1,14 +1,20 @@
 # 🤖 Cadastro de Produtos com Python
 
-> 📦 **Leia os dados de um CSV e automatize o preenchimento de um formulário no navegador.**
+> 📦 **Transforme uma planilha CSV em cadastros preenchidos automaticamente no navegador.**
 
-Projeto de automação de interface que combina PyAutoGUI e pandas para inserir registros de produtos.
+Este projeto automatiza o preenchimento de um formulário de produtos. Ele ajuda a reduzir o trabalho repetitivo de copiar os dados de cada item manualmente, usando um arquivo CSV como fonte.
 
-## ✨ Funcionalidades
+## 🎯 Problema que resolve
 
-- 📄 Carrega os registros de `produtos.csv` com pandas.
-- 🌐 Abre o Chrome e navega até o formulário configurado no script.
-- ⌨️ Preenche os campos do formulário com os dados de cada produto.
+Cadastrar muitos produtos um por um pode consumir tempo e aumentar a chance de erros de digitação. A automação lê os registros de `produtos.csv` e preenche os campos correspondentes no formulário do navegador, repetindo o processo para cada linha.
+
+## ⚙️ Como funciona
+
+1. 📄 O pandas abre `produtos.csv` e carrega os dados em uma tabela.
+2. 🌐 O PyAutoGUI abre o Chrome e acessa o endereço do formulário configurado no script.
+3. 🔐 O script realiza o fluxo de login configurado.
+4. 🔁 Para cada linha do CSV, seleciona os campos e digita código, marca, tipo, categoria, preço, custo e observação.
+5. ✅ Envia o formulário e segue para o próximo produto.
 
 ## 🧰 Requisitos
 
@@ -30,7 +36,7 @@ Na pasta do projeto, confira os dados e as configurações do formulário e rode
 python bagui.py
 ```
 
-O CSV precisa estar na mesma pasta e conter as colunas esperadas pelo script: `codigo`, `marca`, `tipo`, `categoria`, `preco_unitario`, `custo` e `obs`.
+O arquivo CSV precisa estar na mesma pasta e conter as colunas esperadas pelo script: `codigo`, `marca`, `tipo`, `categoria`, `preco_unitario`, `custo` e `obs`.
 
 ## ⚠️ Antes de executar
 
