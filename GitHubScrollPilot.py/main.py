@@ -1,0 +1,20 @@
+import pyautogui as pag
+import time
+
+pag.press("win")
+time.sleep(3)
+pag.write("Chrome")
+pag.press("enter")
+time.sleep(2)
+pag.write("github.com/jaovitudev/")
+pag.press("enter")
+time.sleep(2)
+pag.hotkey("F11")
+time.sleep(4)
+largura, altura = pag.size()
+pag.moveTo(largura // 2, altura // 2)
+pag.scroll(-50)
+time.sleep(2)
+largura, altura = pag.size()
+pag.moveTo(largura // 2, altura // 2)
+pag.scroll(-3000)
