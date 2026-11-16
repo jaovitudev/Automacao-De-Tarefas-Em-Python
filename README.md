@@ -1,29 +1,29 @@
-# 🤖 Automação de Tarefas em Python
+#  Automação de Tarefas em Python
 
-> ⚡ **Menos tarefas repetitivas. Mais Python em ação.**
+> **Menos tarefas repetitivas. Mais Python em ação.**
 >
 > Repositório de mini projetos que automatizam tarefas no computador com Python e PyAutoGUI — do preenchimento de formulários à navegação no navegador.
 
-## 🚀 Projetos
+##  Projetos
 
-### 📦 Cadastro de Produtos
+###  Cadastro de Produtos
 Lê os produtos de um arquivo CSV e preenche automaticamente um formulário no navegador. O projeto usa pandas para processar os dados e PyAutoGUI para controlar a interface.
 
-📁 Pasta: `automacao.py/`
+ Pasta: `automacao.py/`
 
-### 🧭 GitHub Scroll Pilot
+###  GitHub Scroll Pilot
 Abre o Google Chrome, acessa o perfil do GitHub configurado e percorre a página com rolagens automatizadas.
 
-📁 Pasta: `GitHubScrollPilot.py/`
+ Pasta: `GitHubScrollPilot.py/`
 
-## 🧰 Tecnologias
+##  Tecnologias
 
-- 🐍 Python 3
-- 🤖 PyAutoGUI — controle de mouse e teclado
-- 🐼 pandas — leitura dos dados CSV
-- 📄 CSV — lista de produtos
+- Python 3
+- PyAutoGUI — controle de mouse e teclado
+- pandas — leitura dos dados CSV
+- CSV — lista de produtos
 
-## ⚙️ Instalação
+## Instalação
 
 Instale as dependências usadas pelos projetos:
 
@@ -33,7 +33,7 @@ python -m pip install pyautogui pandas
 
 O cadastro de produtos requer Windows e Google Chrome. O GitHub Scroll Pilot também foi configurado para abrir o Chrome no Windows.
 
-## ▶️ Como executar
+## Como executar
 
 Execute cada automação a partir da raiz do repositório:
 
@@ -47,14 +47,14 @@ python GitHubScrollPilot.py/main.py
 
 Antes de iniciar o cadastro, confira o arquivo `automacao.py/produtos.csv` e os campos esperados pelo formulário.
 
-## 🔄 Como funciona o cadastro
+## Como funciona o cadastro
 
 1. O pandas carrega os produtos do CSV.
 2. O PyAutoGUI abre o navegador e acessa o formulário configurado no código.
 3. O script preenche os dados de cada produto e envia o formulário.
 4. O processo se repete para as linhas restantes do arquivo.
 
-## ⚠️ Cuidados importantes
+## Cuidados importantes
 
 - As automações controlam mouse e teclado. Evite usar o computador enquanto elas estiverem rodando.
 - O cadastro usa coordenadas fixas da tela; alterações de resolução, zoom ou layout podem afetar os cliques.
@@ -62,7 +62,7 @@ Antes de iniciar o cadastro, confira o arquivo `automacao.py/produtos.csv` e os 
 - Não publique senhas ou chaves reais no código. Use credenciais de teste e mantenha informações de acesso protegidas.
 - Faça um teste com poucos registros antes de processar uma lista maior.
 
-## 📁 Estrutura
+## Estrutura
 
 ```text
 .
@@ -78,6 +78,6 @@ Antes de iniciar o cadastro, confira o arquivo `automacao.py/produtos.csv` e os 
 
 Criado por [jaovitudev](https://github.com/jaovitudev).
 
-## 📄 Licença
+## Licença
 
 Nenhuma licença foi definida para este repositório.
